@@ -31,7 +31,7 @@ function App() {
   return (
     <>
       <Container maxW={'3xl'}>
-        <Flex flexDir={'column'} mt={'6rem'} justify={'center'}>
+        <Flex flexDir={'column'} mt={{base: '2rem', md:'6rem'}} justify={'center'}>
           <Flex justifyContent={'center'}>
             {colorMode === 'light' ? <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-logo-patternheader-1-cropped.png?raw=true' w='300px' /> : <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-logo-patternheader-2-cropped.png?raw=true' w='300px' />}
           </Flex>
@@ -40,7 +40,7 @@ function App() {
             <Text fontFamily={'heading'} fontSize={'2xl'} textAlign='center' py={'2rem'} ml='10px'>Houston Texas</Text>
           </Flex>
           <Flex flexDir={'column'} mb='10rem'>
-            <Text  fontSize={'3xl'} fontWeight='bold' textAlign='center'>2022 Fall Winter LookBook Drop</Text>
+            <Text  fontSize={{base:'2xl', md: '3xl'}} fontWeight='bold' textAlign='center'>2022 Fall Winter LookBook Drop</Text>
             <Text fontSize={'6xl'} fontWeight='bold' textAlign='center'>
               <Countdown date={Date.now() + 500000000}>
                 <RenderProduct />

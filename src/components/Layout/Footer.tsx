@@ -32,7 +32,7 @@ import {
           </Stack> */}
           <Text>© 2022 Alexis&Co. All rights reserved</Text>
           <Stack spacing={4} direction={{ base: 'column', md: 'row' }}>
-            <Flex alignItems={'center'}>
+            <Flex alignItems={'center'} justifyContent={{base: 'center', md: 'normal'}}>
                 <Text>Stay up to date!</Text>
             </Flex>
             <Input
