@@ -17,17 +17,42 @@ import {
   VStack,
   List,
   ListItem,
-  Card
+  Card,
+  useColorMode
 } from '@chakra-ui/react';
 import { FiMail } from 'react-icons/fi'
 import { MdLocalShipping } from 'react-icons/md';
+import Countdown from 'react-countdown';
+import DigitalClock from './components/DigitalClock';
 
 function App() {
+  const { colorMode, toggleColorMode } = useColorMode();
 
   return (
     <>
       <Container maxW={'3xl'}>
-        <SimpleGrid
+        <Flex flexDir={'column'} mt={'6rem'} justify={'center'}>
+          <Flex justifyContent={'center'}>
+            {colorMode === 'light' ? <Image src='src\assets\alexisnco-logo-patternheader-1-cropped.png' w='300px' /> : <Image src='src\assets\alexisnco-logo-patternheader-2-cropped.png' w='300px' />}
+          </Flex>
+          <Flex justifyContent={'center'}>
+            <Text fontFamily={'heading'} fontSize={'2xl'} textAlign='center' py={'2rem'}><DigitalClock /></Text>
+            <Text fontFamily={'heading'} fontSize={'2xl'} textAlign='center' py={'2rem'} ml='10px'>Houston Texas</Text>
+          </Flex>
+          <Flex flexDir={'column'} mb='10rem'>
+            <Text  fontSize={'3xl'} fontWeight='bold' textAlign='center'>2022 Fall Winter LookBook Drop</Text>
+            <Text fontSize={'6xl'} fontWeight='bold' textAlign='center'>
+              <Countdown date={Date.now() + 500000000}>
+                <RenderProduct />
+              </Countdown>
+            </Text>
+          </Flex>
+        </Flex>
+
+
+
+        {/* Product Card */}
+        {/* <SimpleGrid
           columns={{ base: 1, lg: 1 }}
           spacing={{ base: 8, md: 10 }}
           py={{ base: 18, md: 24 }}>
@@ -107,62 +132,62 @@ function App() {
                     </List>
                   </SimpleGrid>
                 </Box>
-                {/* <Box>
-              <Text
-                fontSize={{ base: '16px', lg: '18px' }}
-                color={useColorModeValue('yellow.500', 'yellow.300')}
-                fontWeight={'500'}
-                textTransform={'uppercase'}
-                mb={'4'}>
-                Product Details
-              </Text>
+                <Box>
+                  <Text
+                    fontSize={{ base: '16px', lg: '18px' }}
+                    color={useColorModeValue('yellow.500', 'yellow.300')}
+                    fontWeight={'500'}
+                    textTransform={'uppercase'}
+                    mb={'4'}>
+                    Product Details
+                  </Text>
 
-              <List spacing={2}>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Between lugs:
-                  </Text>{' '}
-                  20 mm
-                </ListItem>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Bracelet:
-                  </Text>{' '}
-                  leather strap
-                </ListItem>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Case:
-                  </Text>{' '}
-                  Steel
-                </ListItem>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Case diameter:
-                  </Text>{' '}
-                  42 mm
-                </ListItem>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Dial color:
-                  </Text>{' '}
-                  Black
-                </ListItem>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Crystal:
-                  </Text>{' '}
-                  Domed, scratch‑resistant sapphire crystal with anti‑reflective
-                  treatment inside
-                </ListItem>
-                <ListItem>
-                  <Text as={'span'} fontWeight={'bold'}>
-                    Water resistance:
-                  </Text>{' '}
-                  5 bar (50 metres / 167 feet){' '}
-                </ListItem>
-              </List>
-            </Box> */}
+                  <List spacing={2}>
+                    <ListItem>
+                      <Text as={'span'} fontWeight={'bold'}>
+                        Between lugs:
+                      </Text>{' '}
+                      20 mm
+                    </ListItem>
+                    <ListItem>
+                      <Text as={'span'} fontWeight={'bold'}>
+                        Bracelet:
+                      </Text>{' '}
+                      leather strap
+                    </ListItem>
+                    <ListItem>
+                      <Text as={'span'} fontWeight={'bold'}>
+                        Case:
+                      </Text>{' '}
+                      Steel
+                    </ListItem>
+                    <ListItem>
+                      <Text as={'span'} fontWeight={'bold'}>
+                        Case diameter:
+                      </Text>{' '}
+                      42 mm
+                    </ListItem>
+                    <ListItem>
+                      <Text as={'span'} fontWeight={'bold'}>
+                        Dial color:
+                      </Text>{' '}
+                      Black
+                    </ListItem>
+                    <ListItem>
+                      <Text as={'span'} fontWeight={'bold'}>
+                        Crystal:
+                      </Text>{' '}
+                      Domed, scratch‑resistant sapphire crystal with anti‑reflective
+                      treatment inside
+                    </ListItem>
+                    <ListItem>
+                      <Text as={'span'} fontWeight={'bold'}>
+                        Water resistance:
+                      </Text>{' '}
+                      5 bar (50 metres / 167 feet){' '}
+                    </ListItem>
+                  </List>
+                </Box>
               </Stack>
 
               <Button
@@ -187,7 +212,9 @@ function App() {
               </Stack>
             </Stack>
           </Flex>
-        </SimpleGrid>
+        </SimpleGrid> */}
+
+        {/* Hero information data */}
         {/* <Stack
           as={Box}
           textAlign={'center'}
@@ -246,7 +273,10 @@ function App() {
             </Box>
           </Stack>
         </Stack> */}
-        <Stack
+
+
+        {/* Email Stay up to date card */}
+        {/* <Stack
           mt={'1rem'}
           mb={'3rem'}
           border={'1px'}
@@ -292,7 +322,7 @@ function App() {
               Subscribe
             </Button>
           </Stack>
-        </Stack>
+        </Stack> */}
       </Container>
     </>
   )
@@ -310,5 +340,27 @@ const Arrow = createIcon({
     />
   ),
 });
+
+const RenderProduct = () => {
+ 
+ return (
+  <>
+    <Flex flexDir={'column'} mb='3rem'>
+      <Flex justifyContent={'center'} my='2rem'>
+          <Flex mx={'1rem'}>
+            <Image rounded={'8'} src='https://columbia.scene7.com/is/image/ColumbiaSportswear2/1988731_271_f?wid=768&hei=806&v=1669837969'/>
+          </Flex>
+          <Flex mx={'1rem'}>
+            <Image rounded={'8'} src='https://columbia.scene7.com/is/image/ColumbiaSportswear2/1988731_271_b?wid=768&hei=806&v=1669837969'/>
+          </Flex>
+      </Flex>
+      <Flex justifyContent={'center'}>
+          <Button>Buy Now for $220</Button>
+      </Flex>
+    </Flex>
+  </>
+ )
+
+}
 
 export default App

@@ -42,7 +42,7 @@ const Nav = () => {
                 color={useColorModeValue('gray.600', 'white')}
                 minH={'60px'}
                 py={{ base: 2 }}
-                px={{ base: 8 }}
+                px={{ base: 6 }}
                 borderBottom={1}
                 borderStyle={'solid'}
                 borderColor={useColorModeValue('gray.200', 'gray.700')}
