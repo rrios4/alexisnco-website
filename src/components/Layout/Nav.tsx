@@ -61,7 +61,7 @@ const Nav = () => {
                 /> */}
                 </Flex>
                 <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-                    {colorMode === 'light' ? <Image src='src\assets\alexisnco-logo-3.png' boxSize={'30px'}/> : <Image src='src\assets\alexisnco-logo-2.png' boxSize={'30px'}/>}
+                    {colorMode === 'light' ? <Image src='https://raw.githubusercontent.com/rrios4/alexisnco-website/master/src/assets/alexisnco-logo-3.png?token=GHSAT0AAAAAAB4QVE2FROOVOPL7JWGAYRHUY5HGOAQ' boxSize={'30px'}/> : <Image src='https://raw.githubusercontent.com/rrios4/alexisnco-website/master/src/assets/alexisnco-logo-2.png?token=GHSAT0AAAAAAB4QVE2EGINHBAYXAQRJ4CO2Y5HGOJA' boxSize={'30px'}/>}
                     {/* <Image src='src\assets\alexisnco-logo-2.png' boxSize={'30px'}/> */}
                 {/* <Text
                     textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
