@@ -42,7 +42,7 @@ function App() {
           <Flex flexDir={'column'} mb='10rem'>
             <Text  fontSize={{base:'2xl', md: '3xl'}} fontWeight='bold' textAlign='center'>2022 Fall Winter LookBook Drop</Text>
             <Text fontSize={'6xl'} fontWeight='bold' textAlign='center'>
-              <Countdown date={Date.now() + 500000000}>
+              <Countdown date={Date.parse("2022-12-28T00:00:00.000-06:00")}>
                 <RenderProduct />
               </Countdown>
             </Text>
