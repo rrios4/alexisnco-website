@@ -40,7 +40,7 @@ function App() {
             <Text fontFamily={'heading'} fontSize={'2xl'} textAlign='center' py={'2rem'} ml='10px'>Houston Texas</Text>
           </Flex>
           <Flex flexDir={'column'} mb='10rem'>
-            <Text  fontSize={{base:'2xl', md: '3xl'}} fontWeight='bold' textAlign='center'>2022 Fall Winter LookBook Drop</Text>
+            <Text  fontSize={{base:'2xl', md: '3xl'}} fontWeight='bold' textAlign='center' color={colorMode == 'light' ? 'purple.400' : 'purple.200'}>2022 Fall Winter LookBook Drop</Text>
             <Text fontSize={'6xl'} fontWeight='bold' textAlign='center'>
               <Countdown date={Date.parse("2022-12-28T00:00:00.000-06:00")}>
                 <RenderProduct />
@@ -345,17 +345,17 @@ const RenderProduct = () => {
  
  return (
   <>
-    <Flex flexDir={'column'} mb='3rem'>
+    <Flex flexDir={'column'} mb='0rem'>
       <Flex justifyContent={'center'} my='2rem'>
           <Flex mx={'1rem'}>
-            <Image rounded={'8'} src='https://columbia.scene7.com/is/image/ColumbiaSportswear2/1988731_271_f?wid=768&hei=806&v=1669837969'/>
+            <Image rounded={'8'} src='src/assets/item-1-jadedgreen-2.png'/>
           </Flex>
           <Flex mx={'1rem'}>
-            <Image rounded={'8'} src='https://columbia.scene7.com/is/image/ColumbiaSportswear2/1988731_271_b?wid=768&hei=806&v=1669837969'/>
+            <Image rounded={'8'} src='src/assets/item-1-jadedgreen-1.png'/>
           </Flex>
       </Flex>
       <Flex justifyContent={'center'}>
-          <Button>Buy Now for $220</Button>
+          <Button disabled>SOLD OUT</Button>
       </Flex>
     </Flex>
   </>
