@@ -33,7 +33,7 @@ function App() {
       <Container maxW={'3xl'}>
         <Flex flexDir={'column'} mt={{base: '2rem', md:'6rem'}} justify={'center'}>
           <Flex justifyContent={'center'}>
-            {colorMode === 'light' ? <Image src='src/assets/alexisnco-header-logo-v2-black-002.png' w='200px' /> : <Image src='src/assets/alexisnco-header-logo-v2-pascalpurple-001.png' w='200px' />}
+            {colorMode === 'light' ? <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-header-logo-v2-black-002.png?raw=true' w='200px' /> : <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-header-logo-v2-pascalpurple-001.png?raw=true' w='200px' />}
           </Flex>
           <Flex justifyContent={'center'}>
             <Text fontFamily={'heading'} fontSize={'2xl'} textAlign='center' py={'2rem'}><DigitalClock /></Text>
