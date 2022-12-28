@@ -16,7 +16,7 @@ import {
       <Box
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.700', 'gray.200')}
-        position={'fixed'}
+        px={'1rem'}
         bottom={'0'}
         left={'0'}
         w={'full'}>
