@@ -40,7 +40,7 @@ function App() {
             <Text fontFamily={'heading'} fontSize={'2xl'} textAlign='center' py={'2rem'} ml='10px'>Houston Texas</Text>
           </Flex>
           <Flex flexDir={'column'} mb='10rem'>
-            <Text  fontSize={{base:'2xl', md: '3xl'}} fontWeight='bold' textAlign='center' color={colorMode == 'light' ? 'purple.400' : 'purple.200'}>2022 Fall Winter Drop</Text>
+            {/* <Text  fontSize={{base:'2xl', md: '3xl'}} fontWeight='bold' textAlign='center' color={colorMode == 'light' ? 'purple.400' : 'purple.200'}>2022 Fall Winter Drop</Text> */}
             <Text fontSize={'6xl'} fontWeight='bold' textAlign='center'>
               <Countdown date={Date.parse("2022-12-28T00:00:00.000-06:00")}>
                 <RenderProduct />
@@ -348,10 +348,10 @@ const RenderProduct = () => {
     <Flex flexDir={'column'} mb='0rem'>
       <Flex justifyContent={'center'} my='2rem'>
           <Flex mx={'1rem'}>
-            <Image rounded={'8'} src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/item-1-jadedgreen-2.png?raw=true'/>
+            <Image rounded={'8'} src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/item-1-jadedgreen-2-masked.png?raw=true'/>
           </Flex>
           <Flex mx={'1rem'}>
-            <Image rounded={'8'} src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/item-1-jadedgreen-1.png?raw=true'/>
+            <Image rounded={'8'} src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/item-1-jadedgreen-1-masked.png?raw=true'/>
           </Flex>
       </Flex>
       <Flex justifyContent={'center'}>
