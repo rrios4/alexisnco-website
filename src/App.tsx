@@ -348,10 +348,10 @@ const RenderProduct = () => {
     <Flex flexDir={'column'} mb='0rem'>
       <Flex justifyContent={'center'} my='2rem'>
           <Flex mx={'1rem'}>
-            <Image rounded={'8'} src='src/assets/item-1-jadedgreen-2.png'/>
+            <Image rounded={'8'} src='./src/assets/item-1-jadedgreen-2.png'/>
           </Flex>
           <Flex mx={'1rem'}>
-            <Image rounded={'8'} src='src/assets/item-1-jadedgreen-1.png'/>
+            <Image rounded={'8'} src='./src/assets/item-1-jadedgreen-1.png'/>
           </Flex>
       </Flex>
       <Flex justifyContent={'center'}>
