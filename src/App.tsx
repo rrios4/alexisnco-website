@@ -42,7 +42,7 @@ function App() {
           <Flex flexDir={'column'} mb='10rem'>
             {/* <Text  fontSize={{base:'2xl', md: '3xl'}} fontWeight='bold' textAlign='center' color={colorMode == 'light' ? 'purple.400' : 'purple.200'}>2022 Fall Winter Drop</Text> */}
             <Text fontSize={'6xl'} fontWeight='bold' textAlign='center'>
-              <Countdown date={Date.parse("2022-12-28T00:00:00.000-06:00")}>
+              <Countdown date={Date.parse("2022-12-28T16:00:00.000-06:00")}>
                 <RenderProduct />
               </Countdown>
             </Text>
