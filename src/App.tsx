@@ -50,7 +50,7 @@ function App() {
         </Flex>
         <Flex justifyContent={'center'} flexDir='column' mb={'2rem'}>
           <Flex justifyContent={'center'}>
-            <Text fontSize={'3xl'} fontWeight='bold'>2022 Fall Winter LookBook</Text>
+            <Text fontSize={{base: '2xl', md:'3xl'}} fontWeight='bold'>2022 Fall Winter LookBook</Text>
           </Flex>
           <Flex justifyContent={'center'} my='1rem'>
              <SimpleGrid spacing={2} minChildWidth='200px'>
