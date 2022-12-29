@@ -50,10 +50,10 @@ function App() {
         </Flex>
         <Flex justifyContent={'center'} flexDir='column' mb={'2rem'}>
           <Flex justifyContent={'center'}>
-            <Text fontSize={'3xl'} fontWeight='500'>2022 Fall Winter LookBook</Text>
+            <Text fontSize={'3xl'} fontWeight='bold'>2022 Fall Winter LookBook</Text>
           </Flex>
           <Flex justifyContent={'center'} my='1rem'>
-             <SimpleGrid columns={3} spacing={2}>
+             <SimpleGrid spacing={2} minChildWidth='200px'>
                 <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-03.jpeg?raw=true' minW='100px' rounded='md'/>
                 <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-02.jpeg?raw=true' minW='100px' rounded='md'/>
                 <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-04.jpeg?raw=true' minW='100px' rounded='md'/>
