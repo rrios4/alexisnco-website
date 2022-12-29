@@ -19,7 +19,9 @@ import {
         px={'1px'}
         bottom={'0'}
         left={'0'}
-        w={'full'}>
+        w={'full'}
+        pb={{base: '1rem', md: '0'}}
+        mt={{base: '2rem', md: '1rem'}}>
         <Container
           as={Stack}
           maxW={'6xl'}

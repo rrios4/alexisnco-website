@@ -39,13 +39,25 @@ function App() {
             <Text fontFamily={'heading'} fontSize={'2xl'} textAlign='center' py={'2rem'}><DigitalClock /></Text>
             <Text fontFamily={'heading'} fontSize={'2xl'} textAlign='center' py={'2rem'} ml='10px'>Houston Texas</Text>
           </Flex>
-          <Flex flexDir={'column'} mb='10rem'>
+          <Flex flexDir={'column'} mb='3rem'>
             {/* <Text  fontSize={{base:'2xl', md: '3xl'}} fontWeight='bold' textAlign='center' color={colorMode == 'light' ? 'purple.400' : 'purple.200'}>2022 Fall Winter Drop</Text> */}
             <Text fontSize={'6xl'} fontWeight='bold' textAlign='center'>
               <Countdown date={Date.parse("2022-12-28T16:00:00.000-06:00")}>
                 <RenderProduct />
               </Countdown>
             </Text>
+          </Flex>
+        </Flex>
+        <Flex justifyContent={'center'} flexDir='column'>
+          <Flex justifyContent={'center'}>
+            <Text fontSize={'2xl'} fontWeight='bold'>2022 Fall Winter LookBook</Text>
+          </Flex>
+          <Flex justifyContent={'center'} my='1rem'>
+             <SimpleGrid columns={3} spacing={2}>
+                <Image src='src/assets/alexisnco-instapost-03.jpeg' w={'150px'} rounded='md'/>
+                <Image src='src/assets/alexisnco-instapost-02.jpeg' w={'150px'} rounded='md'/>
+                <Image src='src/assets/alexisnco-instapost-04.jpeg' w={'150px'} rounded='md'/>
+              </SimpleGrid> 
           </Flex>
         </Flex>
 
@@ -354,8 +366,11 @@ const RenderProduct = () => {
             <Image rounded={'8'} src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/item-1-jadedgreen-1-masked.png?raw=true'/>
           </Flex>
       </Flex>
-      <Flex justifyContent={'center'}>
-          <Button disabled>SOLD OUT</Button>
+      <Flex justifyContent={'center'} flexDir='column'>
+          <Text fontSize={'2xl'} mb='1rem'>$220 USD</Text>
+          <Flex justifyContent={'center'}>
+            <Button disabled>SOLD OUT</Button>
+          </Flex>
       </Flex>
     </Flex>
   </>
