@@ -53,14 +53,16 @@ import {
                 bg: useColorModeValue('gray.200', 'gray.800'),
                 outline: 'none',
               }}
+              disabled
             />
             <Button
-              bg={useColorModeValue('green.300', 'green.100')}
+              bg={useColorModeValue('green.200', 'green.400')}
               rounded={'full'}
-              color={useColorModeValue('white', 'black')}
+              color={useColorModeValue('black', 'white')}
               flex={'1 0 auto'}
-              _hover={{ bg: 'green.400' }}
-              _focus={{ bg: 'green.400' }}>
+              _hover={{ bg: useColorModeValue('green.300', 'green.500') }}
+              _focus={{ bg: 'green.400' }}
+              disabled>
               <BiMailSend/>
             </Button>
           </Stack>
