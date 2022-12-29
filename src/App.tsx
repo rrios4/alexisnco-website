@@ -54,9 +54,9 @@ function App() {
           </Flex>
           <Flex justifyContent={'center'} my='1rem'>
              <SimpleGrid columns={3} spacing={2}>
-                <Image src='src/assets/alexisnco-instapost-03.jpeg' w={'150px'} rounded='md'/>
-                <Image src='src/assets/alexisnco-instapost-02.jpeg' w={'150px'} rounded='md'/>
-                <Image src='src/assets/alexisnco-instapost-04.jpeg' w={'150px'} rounded='md'/>
+                <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-03.jpeg?raw=true' w={'150px'} rounded='md'/>
+                <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-02.jpeg?raw=true' w={'150px'} rounded='md'/>
+                <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-04.jpeg?raw=true' w={'150px'} rounded='md'/>
               </SimpleGrid> 
           </Flex>
         </Flex>
