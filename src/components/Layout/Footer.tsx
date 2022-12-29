@@ -16,7 +16,7 @@ import {
       <Box
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.700', 'gray.200')}
-        px={'1rem'}
+        px={'1px'}
         bottom={'0'}
         left={'0'}
         w={'full'}>
@@ -35,9 +35,9 @@ import {
             <Link href={'#'}>Contact</Link>
           </Stack> */}
           <Text>© 2022 Alexis&Co. All rights reserved</Text>
-          <Stack spacing={4} direction={{ base: 'column', md: 'row' }}>
-            <Flex alignItems={'center'} justifyContent={{base: 'center', md: 'normal'}}>
-                <Text>Stay up to date!</Text>
+          <Stack spacing={2} direction={{ base: 'column', md: 'row' }}>
+            <Flex alignItems={'center'} justifyContent={{base: 'center', md: 'flex-end'}} w={{base: '', md: '210px'}} px={{base: '', md: '4px'}} >
+                <Text>Subscribe for Newsletters</Text>
             </Flex>
             <Input
               type={'text'}
