@@ -18,12 +18,17 @@ import {
   List,
   ListItem,
   Card,
-  useColorMode
+  useColorMode,
+  IconButton, 
+  useBreakpointValue
 } from '@chakra-ui/react';
 import { FiMail } from 'react-icons/fi'
 import { MdLocalShipping } from 'react-icons/md';
+import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 import Countdown from 'react-countdown';
 import DigitalClock from './components/DigitalClock';
+import SimpleSlider from './components/SimpleSlider';
+
 
 function App() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -48,7 +53,7 @@ function App() {
             </Text>
           </Flex>
         </Flex>
-        <Flex justifyContent={'center'} flexDir='column' mb={'2rem'}>
+        {/* <Flex justifyContent={'center'} flexDir='column' mb={'2rem'}>
           <Flex justifyContent={'center'}>
             <Text fontSize={{base: '2xl', md:'3xl'}} fontWeight='bold'>2022 Fall Winter LookBook</Text>
           </Flex>
@@ -59,6 +64,12 @@ function App() {
                 <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-04.jpeg?raw=true' minW='100px' rounded='md'/>
               </SimpleGrid> 
           </Flex>
+        </Flex> */}
+        <Flex maxWidth={'full'} flexDir='column' mb={'2rem'}>
+          <Flex justifyContent={'center'}>
+              <Text fontSize={{base: '2xl', md:'3xl'}} fontWeight='bold'>2022 Fall Winter LookBook</Text>
+          </Flex>
+          <SimpleSlider/>
         </Flex>
 
 
