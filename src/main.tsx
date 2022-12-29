@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import Layout from './components/Layout/Layout'
+import theme from './theme'
+import '@fontsource/barlow'
 
 const colors = {
   brand: {
@@ -12,11 +14,9 @@ const colors = {
   }
 }
 
-const theme = extendTheme({ colors })
-
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Layout>
         <App />
       </Layout>

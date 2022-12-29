@@ -20,7 +20,7 @@ import {
         bottom={'0'}
         left={'0'}
         w={'full'}
-        pb={{base: '1rem', md: '0'}}
+        pb={{base: '2rem', md: '0'}}
         mt={{base: '2rem', md: '1rem'}}>
         <Container
           as={Stack}
@@ -38,7 +38,7 @@ import {
           </Stack> */}
           <Text>© 2022 Alexis&Co. All rights reserved</Text>
           <Stack spacing={2} direction={{ base: 'column', md: 'row' }}>
-            <Flex alignItems={'center'} justifyContent={{base: 'center', md: 'flex-end'}} w={{base: '', md: '210px'}} px={{base: '', md: '4px'}} >
+            <Flex alignItems={'center'} justifyContent={{base: 'center', md: 'flex-end'}} w={{base: '', md: '220px'}} px={{base: '', md: '4px'}} >
                 <Text>Subscribe for Newsletters</Text>
             </Flex>
             <Input
@@ -59,8 +59,8 @@ import {
               rounded={'full'}
               color={useColorModeValue('white', 'black')}
               flex={'1 0 auto'}
-              _hover={{ bg: '#90E2C2' }}
-              _focus={{ bg: '#90E2C2' }}>
+              _hover={{ bg: 'green.400' }}
+              _focus={{ bg: 'green.400' }}>
               <BiMailSend/>
             </Button>
           </Stack>

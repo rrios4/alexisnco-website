@@ -35,9 +35,9 @@ function App() {
           <Flex justifyContent={'center'}>
             {colorMode === 'light' ? <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-header-logo-v2-black-002.png?raw=true' w='200px' /> : <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-header-logo-v2-pascalpurple-001.png?raw=true' w='200px' />}
           </Flex>
-          <Flex justifyContent={'center'}>
-            <Text fontFamily={'heading'} fontSize={'2xl'} textAlign='center' py={'2rem'}><DigitalClock /></Text>
-            <Text fontFamily={'heading'} fontSize={'2xl'} textAlign='center' py={'2rem'} ml='10px'>Houston Texas</Text>
+          <Flex justifyContent={'center'} fontWeight='thin'>
+            <Text fontSize={'2xl'} textAlign='center' py={'1rem'}><DigitalClock /></Text>
+            <Text fontSize={'2xl'} textAlign='center' py={'1rem'} ml='10px'>Houston, TX</Text>
           </Flex>
           <Flex flexDir={'column'} mb='3rem'>
             {/* <Text  fontSize={{base:'2xl', md: '3xl'}} fontWeight='bold' textAlign='center' color={colorMode == 'light' ? 'purple.400' : 'purple.200'}>2022 Fall Winter Drop</Text> */}
@@ -48,15 +48,15 @@ function App() {
             </Text>
           </Flex>
         </Flex>
-        <Flex justifyContent={'center'} flexDir='column'>
+        <Flex justifyContent={'center'} flexDir='column' mb={'2rem'}>
           <Flex justifyContent={'center'}>
-            <Text fontSize={'2xl'} fontWeight='bold'>2022 Fall Winter LookBook</Text>
+            <Text fontSize={'3xl'} fontWeight='500'>2022 Fall Winter LookBook</Text>
           </Flex>
           <Flex justifyContent={'center'} my='1rem'>
              <SimpleGrid columns={3} spacing={2}>
-                <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-03.jpeg?raw=true' w={'150px'} rounded='md'/>
-                <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-02.jpeg?raw=true' w={'150px'} rounded='md'/>
-                <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-04.jpeg?raw=true' w={'150px'} rounded='md'/>
+                <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-03.jpeg?raw=true' minW='100px' rounded='md'/>
+                <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-02.jpeg?raw=true' minW='100px' rounded='md'/>
+                <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-04.jpeg?raw=true' minW='100px' rounded='md'/>
               </SimpleGrid> 
           </Flex>
         </Flex>
@@ -367,7 +367,7 @@ const RenderProduct = () => {
           </Flex>
       </Flex>
       <Flex justifyContent={'center'} flexDir='column'>
-          <Text fontSize={'2xl'} mb='1rem'>$220 USD</Text>
+          <Text fontSize={'2xl'} mb='1rem' fontWeight={'700'}>$220 USD</Text>
           <Flex justifyContent={'center'}>
             <Button disabled>SOLD OUT</Button>
           </Flex>
