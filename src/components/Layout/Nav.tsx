@@ -36,7 +36,7 @@ const Nav = () => {
 
     return (
         <>
-            <Box position={'fixed'} w='full'>
+            <Box position={'fixed'} w='full' zIndex={'1'}>
             <Flex
                 bg={useColorModeValue('white', 'gray.800')}
                 color={useColorModeValue('gray.600', 'white')}
