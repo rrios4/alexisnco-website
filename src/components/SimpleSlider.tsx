@@ -86,9 +86,9 @@ export default function SimpleSlider() {
             }
           }}>
             <Slider {...settings}>
-              <Slide title="Image 1" imgURL="src/assets/alexisnco-instapost-07.jpg"/>
-              <Slide title="Image 2" imgURL="src/assets/alexisnco-instapost-06.jpg"/>
-              <Slide title="Image 3" imgURL="src/assets/alexisnco-instapost-05.png"/>
+              <Slide title="Image 1" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-07.jpg?raw=true"/>
+              <Slide title="Image 2" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-06.jpg?raw=true"/>
+              <Slide title="Image 3" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-05.png?raw=true"/>
               <Slide title="Image 4" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-03.jpeg?raw=true"/>
               <Slide title="Image 5" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-02.jpeg?raw=true"/>
               <Slide title="Image 6" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-04.jpeg?raw=true"/>
@@ -142,9 +142,9 @@ export default function SimpleSlider() {
             }
           }}>
             <Slider {...settings}>
-              <Slide title="Image 1" imgURL="src/assets/alexisnco-instapost-07.jpg"/>
-              <Slide title="Image 2" imgURL="src/assets/alexisnco-instapost-06.jpg"/>
-              <Slide title="Image 3" imgURL="src/assets/alexisnco-instapost-05.png"/>
+              <Slide title="Image 1" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-07.jpg?raw=true"/>
+              <Slide title="Image 2" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-06.jpg?raw=true"/>
+              <Slide title="Image 3" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-05.png?raw=true"/>
               <Slide title="Image 4" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-03.jpeg?raw=true"/>
               <Slide title="Image 5" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-02.jpeg?raw=true"/>
               <Slide title="Image 6" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-04.jpeg?raw=true"/>
