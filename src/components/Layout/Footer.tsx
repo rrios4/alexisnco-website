@@ -14,7 +14,7 @@ import {
   export default function SmallWithNavigation() {
     return (
       <Box
-        bg={useColorModeValue('white', 'gray.800')}
+        bg={useColorModeValue('#E8EA36', 'gray.800')}
         color={useColorModeValue('gray.700', 'gray.200')}
         px={'1px'}
         bottom={'0'}
@@ -56,11 +56,11 @@ import {
               disabled
             />
             <Button
-              bg={useColorModeValue('green.200', 'green.400')}
+              bg={useColorModeValue('blue.500', 'green.400')}
               rounded={'full'}
               color={useColorModeValue('black', 'white')}
               flex={'1 0 auto'}
-              _hover={{ bg: useColorModeValue('green.300', 'green.500') }}
+              _hover={{ bg: useColorModeValue('blue.300', 'green.500') }}
               _focus={{ bg: 'green.400' }}
               disabled>
               <BiMailSend/>

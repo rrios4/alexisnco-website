@@ -38,14 +38,14 @@ const Nav = () => {
         <>
             <Box position={'fixed'} w='full' zIndex={'1'}>
             <Flex
-                bg={useColorModeValue('white', 'gray.800')}
+                bg={useColorModeValue('blue.600', 'gray.800')}
                 color={useColorModeValue('gray.600', 'white')}
                 minH={'60px'}
                 py={{ base: 2 }}
                 px={{ base: 6 }}
                 borderBottom={1}
                 borderStyle={'solid'}
-                borderColor={useColorModeValue('gray.200', 'gray.700')}
+                borderColor={useColorModeValue('blue.400', 'gray.700')}
                 align={'center'}>
                 <Flex
                 flex={{ base: 1, md: 'auto' }}
@@ -61,7 +61,7 @@ const Nav = () => {
                 /> */}
                 </Flex>
                 <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-                    {colorMode === 'light' ? <Image src='https://raw.githubusercontent.com/rrios4/alexisnco-website/master/src/assets/alexisnco-logo-3.png' boxSize={'30px'}/> : <Image src='https://raw.githubusercontent.com/rrios4/alexisnco-website/master/src/assets/alexisnco-logo-2.png' boxSize={'30px'}/>}
+                    {colorMode === 'light' ?  <Image src='https://raw.githubusercontent.com/rrios4/alexisnco-website/master/src/assets/alexisnco-logo-2.png' boxSize={'30px'}/>  : <Image src='https://raw.githubusercontent.com/rrios4/alexisnco-website/master/src/assets/alexisnco-logo-3.png' boxSize={'30px'}/>}
                     {/* <Image src='src\assets\alexisnco-logo-2.png' boxSize={'30px'}/> */}
                 {/* <Text
                     textAlign={useBreakpointValue({ base: 'center', md: 'left' })}
@@ -102,11 +102,11 @@ const Nav = () => {
                     Sign Up
                 </Button> */}
                 <Link href='https://www.instagram.com/alexisnco/' isExternal>
-                    <IconButton aria-label='Visit instagram page.' variant={'ghost'} icon={<FiInstagram />}/>
+                    <IconButton aria-label='Visit instagram page.' variant={'ghost'} _hover={{bg: useColorModeValue('blue.500','')}} color={'white'} icon={<FiInstagram />}/>
                 </Link>
-                <Button onClick={toggleColorMode} variant={'ghost'}>
+                {/* <Button onClick={toggleColorMode} variant={'ghost'}>
                     {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-                </Button>
+                </Button> */}
                 </Stack>
             </Flex>
 

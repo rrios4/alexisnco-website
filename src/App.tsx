@@ -38,20 +38,31 @@ function App() {
       <Container maxW={'3xl'}>
         <Flex flexDir={'column'} mt={{base: '2rem', md:'6rem'}} justify={'center'}>
           <Flex justifyContent={'center'}>
-            {colorMode === 'light' ? <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-header-logo-v2-black-002.png?raw=true' w='200px' /> : <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-header-logo-v2-pascalpurple-001.png?raw=true' w='200px' />}
+            {colorMode === 'light' ? <Image src='src/assets/alexisnco-header-logo-v2-yellow-001.png' w={{base: '150px', md:'180px'}} /> : <Image src='https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-header-logo-v2-pascalpurple-001.png?raw=true' w='200px' />}
           </Flex>
-          <Flex justifyContent={'center'} fontWeight='thin'>
+          <Flex justifyContent={'center'} fontWeight='thin' color={'white'}>
             <Text fontSize={'2xl'} textAlign='center' py={'1rem'}><DigitalClock /></Text>
             <Text fontSize={'2xl'} textAlign='center' py={'1rem'} ml='10px'>Houston, TX</Text>
           </Flex>
-          <Flex flexDir={'column'} mb='3rem'>
-            {/* <Text  fontSize={{base:'2xl', md: '3xl'}} fontWeight='bold' textAlign='center' color={colorMode == 'light' ? 'purple.400' : 'purple.200'}>2022 Fall Winter Drop</Text> */}
+          <Flex justifyContent={'center'} mt={'10px'} mb={'4rem'}>
+            <Flex maxW={{base: '300px',md:'350px'}} flexDir={'column'}>
+              <Text fontSize={{base: '4xl', md: '5xl'}}  align={'center'} color={'#E8EA36'} textShadow={'2xl'}>ГЕОПОЛИТИКА ЗАСТАЛА МОЕГО СЫНА УБИТЬ СВОЮ ВЕРБОВКУ</Text>
+              <Text fontSize={'sm'} align={'center'} color={'#E8EA36'} mt={'1rem'}>"GEOPOLITICS MADE MY SON KILL HIS RECRUITER"</Text>
+              <Text fontSize={{base: '5xl', md: '6xl'}} fontWeight='extrabold' mt={'1rem'} textAlign='center' color={'white'}>
+                <Countdown date={Date.parse("2023-01-15T16:00:00.000-06:00")}>
+                  {/* <RenderProduct /> */}
+                  <Button disabled>AVAILABLE NOW</Button>
+                </Countdown>
+              </Text>
+            </Flex>
+          </Flex>
+          {/* <Flex flexDir={'column'} mb='3rem'>
             <Text fontSize={'6xl'} fontWeight='bold' textAlign='center'>
               <Countdown date={Date.parse("2022-12-28T16:00:00.000-06:00")}>
                 <RenderProduct />
               </Countdown>
             </Text>
-          </Flex>
+          </Flex> */}
         </Flex>
         {/* <Flex justifyContent={'center'} flexDir='column' mb={'2rem'}>
           <Flex justifyContent={'center'}>
@@ -67,7 +78,7 @@ function App() {
         </Flex> */}
         <Flex maxWidth={'full'} flexDir='column' mb={'2rem'}>
           <Flex justifyContent={'center'}>
-              <Text fontSize={{base: '2xl', md:'3xl'}} fontWeight='bold'>2022 Fall Winter LookBook</Text>
+              <Text fontSize={{base: '2xl', md:'3xl'}} fontWeight='bold' color={'white'}>2022 Fall Winter LookBook</Text>
           </Flex>
           <SimpleSlider/>
         </Flex>

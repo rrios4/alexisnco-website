@@ -13,13 +13,14 @@ const Slide = ({title, imgURL}: SlideProps) => {
     return(
         <HStack
         w="100%"
+        p={'10px'}
         minH={{base: '120px', md: '400px'}}
         bg="gray.100"
         border="gray.100"
         alignContent="center"
         justifyContent="center"
         mx="0">
-            <Image src={imgURL} w='full' h="full"/>
+            <Image src={imgURL} w='full' h='full'/>
         </HStack>
     );
 };
@@ -47,24 +48,24 @@ export default function SimpleSlider() {
                 transition: "0.2s",
                 content: "''",
                 borderRadius: "100%",
-                background: "green.400",
+                background: "#E8EA36",
                 w: '15px',
                 h: '15px'
               },
             },
             ".slick-arrow": {
-              backgroundColor: "green.400",
+              backgroundColor: "#E8EA36",
               color: "white",
               w: "30px",
               h: "50px",
               rounded: '6',
               transition: "0.2s",
               _hover: {
-                backgroundColor: "green.500",
+                backgroundColor: "yellow.400",
                 color: "white"
               },
               _focus: {
-                backgroundColor: "green.500",
+                backgroundColor: "yellow.400",
                 color: "white"
               },
               _before: {
@@ -85,9 +86,12 @@ export default function SimpleSlider() {
             }
           }}>
             <Slider {...settings}>
-                <Slide title="Image 1" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-03.jpeg?raw=true"/>
-                <Slide title="Image 2" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-02.jpeg?raw=true"/>
-                <Slide title="Image 3" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-04.jpeg?raw=true"/>
+              <Slide title="Image 1" imgURL="src/assets/alexisnco-instapost-07.jpg"/>
+              <Slide title="Image 2" imgURL="src/assets/alexisnco-instapost-06.jpg"/>
+              <Slide title="Image 3" imgURL="src/assets/alexisnco-instapost-05.png"/>
+              <Slide title="Image 4" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-03.jpeg?raw=true"/>
+              <Slide title="Image 5" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-02.jpeg?raw=true"/>
+              <Slide title="Image 6" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-04.jpeg?raw=true"/>
             </Slider>
         </Box> :
          <Box
@@ -138,9 +142,12 @@ export default function SimpleSlider() {
             }
           }}>
             <Slider {...settings}>
-                <Slide title="Image 1" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-03.jpeg?raw=true"/>
-                <Slide title="Image 2" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-02.jpeg?raw=true"/>
-                <Slide title="Image 3" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-04.jpeg?raw=true"/>
+              <Slide title="Image 1" imgURL="src/assets/alexisnco-instapost-07.jpg"/>
+              <Slide title="Image 2" imgURL="src/assets/alexisnco-instapost-06.jpg"/>
+              <Slide title="Image 3" imgURL="src/assets/alexisnco-instapost-05.png"/>
+              <Slide title="Image 4" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-03.jpeg?raw=true"/>
+              <Slide title="Image 5" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-02.jpeg?raw=true"/>
+              <Slide title="Image 6" imgURL="https://github.com/rrios4/alexisnco-website/blob/master/src/assets/alexisnco-instapost-04.jpeg?raw=true"/>
             </Slider>
         </Box>
         }

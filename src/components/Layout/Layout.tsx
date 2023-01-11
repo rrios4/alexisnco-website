@@ -14,6 +14,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
   return (
     <>
         {/* {colorMode === 'light' ? <Global styles={css`body { background-image: url("https://raw.githubusercontent.com/rrios4/alexisnco-website/master/src/assets/alexisnco-background-design-1-back.png"); background-size: contain; !important; }`}/> : <Global styles={css`body { background-image: url("https://raw.githubusercontent.com/rrios4/alexisnco-website/master/src/assets/alexisnco-background-design-1-skin.png"); background-size: contain; !important; }`}/>} */}
+        {colorMode === 'light' ? <Global styles={css`body { background-color: #005BBA }`}/> : <Global styles={css`body { background-image: url("https://raw.githubusercontent.com/rrios4/alexisnco-website/master/src/assets/alexisnco-background-design-1-skin.png"); background-size: contain; !important; }`}/>}
         <Nav/>
         <Flex flexDir={'column'} maxW={'full'}>
             <Flex mt={{base: '4rem', md: '0'}}>
