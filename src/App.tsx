@@ -47,12 +47,12 @@ function App() {
           <Flex justifyContent={'center'} mt={'10px'} mb={'4rem'}>
             <Flex maxW={{base: '300px',md:'350px'}} flexDir={'column'}>
               <Text fontSize={{base: '4xl', md: '5xl'}}  align={'center'} color={'#E8EA36'} textShadow={'2xl'}>ГЕОПОЛИТИКА ЗАСТАЛА МОЕГО СЫНА УБИТЬ СВОЮ ВЕРБОВКУ</Text>
-              <Text fontSize={'sm'} align={'center'} color={'#E8EA36'} mt={'1rem'}>"GEOPOLITICS MADE MY SON KILL HIS RECRUITER"</Text>
+              <Text fontSize={{base:'12px', md: 'sm'}} align={'center'} color={'#E8EA36'} mt={'1rem'}>(GEOPOLITICS MADE MY SON KILL HIS RECRUITER)</Text>
               <Text fontSize={{base: '5xl', md: '6xl'}} fontWeight='extrabold' mt={'1rem'} textAlign='center' color={'white'}>
-                <Countdown date={Date.parse("2023-01-15T16:00:00.000-06:00")}>
-                  {/* <RenderProduct /> */}
+                {/* <Countdown date={Date.parse("2023-01-15T16:00:00.000-06:00")}>
+                  <RenderProduct />
                   <Button disabled>AVAILABLE NOW</Button>
-                </Countdown>
+                </Countdown> */}
               </Text>
             </Flex>
           </Flex>
