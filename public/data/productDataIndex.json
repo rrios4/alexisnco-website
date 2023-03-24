@@ -10,12 +10,20 @@
         "released": false,
         "purchase_window_open": false,
         "sold_out": true,
-        "product_images": {
-            "img_one": "",
-            "img_two": "",
-            "img_three": "",
-            "img_four": ""
-        }
+        "product_images": [
+            {
+                "img": "/images/carousel/alexisnco-instapost-06.jpg"
+            },
+            {
+                "img": "/images/carousel/alexisnco-instapost-09.jpg"
+            },
+            {
+                "img": "/images/carousel/alexisnco-instapost-05.png"
+            },
+            {
+                "img": "/images/carousel/alexisnco-instapost-08.jpg"
+            }
+        ]
     },
     {
         "title": "2022 Fall Winter LookBook",
@@ -28,11 +36,19 @@
         "released": true,
         "purchase_window_open": false,
         "sold_out": true,
-        "product_images": {
-            "img_one": "/images/carousel/alexisnco-instapost-06.jpg",
-            "img_two": "/images/carousel/alexisnco-instapost-09.jpg",
-            "img_three": "/images/carousel/alexisnco-instapost-05.png",
-            "img_four": "/images/carousel/alexisnco-instapost-08.jpg"
-        }
+        "product_images": [
+            {
+                "img": "/images/carousel/alexisnco-instapost-06.jpg"
+            },
+            {
+                "img": "/images/carousel/alexisnco-instapost-09.jpg"
+            },
+            {
+                "img": "/images/carousel/alexisnco-instapost-05.png"
+            },
+            {
+                "img": "/images/carousel/alexisnco-instapost-08.jpg"
+            }
+        ]
     }
 ]

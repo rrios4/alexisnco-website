@@ -17,7 +17,7 @@ class DigitalClock extends Component<{}, DigitalClockState> {
   }
 
   componentDidMount() {
-    this.interval = setInterval(() => this.updateTime(), 1000);
+    this.interval = window.setInterval(() => this.updateTime(), 1000);
   }
 
   componentWillUnmount() {

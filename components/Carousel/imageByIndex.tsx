@@ -7,9 +7,16 @@ import image6 from '../../public/images/carousel/alexisnco-instapost-08.jpg'
 import image7 from '../../public/images/carousel/alexisnco-instapost-10.jpg'
 import image8 from '../../public/images/carousel/alexisnco-instapost-02.jpeg'
 import image9 from '../../public/images/carousel/alexisnco-instapost-01.jpeg'
+import { StaticImageData } from 'next/image'
 
-export const images: string[] = [image1, image2, image3, image4, image5, image6, image7, image8, image9]
+interface IImages {
+    images: IImage[]
+}
 
-const imageByIndex = (index: number): string => images[index % images.length]
+interface IImage{}
+
+export const images: StaticImageData[] = [image1, image2, image3, image4, image5, image6, image7, image8, image9]
+
+const imageByIndex = (index: number): StaticImageData => images[index % images.length]
 
 export default imageByIndex

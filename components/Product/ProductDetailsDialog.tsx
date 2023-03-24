@@ -2,31 +2,11 @@ import React from 'react'
 import Image from 'next/image'
 import * as Dialog from '@radix-ui/react-dialog'
 import { Cross1Icon } from '@radix-ui/react-icons'
+import { IProduct } from '@/interfaces/global.interface'
 
 interface IProductDetailsDialogProps {
   children: React.ReactNode;
   product: IProduct;
-}
-
-interface IProduct {
-    title: string;
-    drop_start_date: string;
-    drop_close_date: string;
-    price: number,
-    img_cover_url: string;
-    description: string;
-    alt: string;
-    released: boolean;
-    purchase_window_open: boolean;
-    sold_out: boolean
-    product_images: IProductImages;
-}
-
-interface IProductImages {
-    img_one: string;
-    img_two: string;
-    img_three: string;
-    img_four: string;
 }
 
 const ProductDetailsDialog: React.FC<IProductDetailsDialogProps> = (props) => {
@@ -53,10 +33,15 @@ const ProductDetailsDialog: React.FC<IProductDetailsDialogProps> = (props) => {
           <Dialog.Description className='mt-[10px] mb-5 text-[15px] leading-normal text-slate-200 text-center'>{props.product.description}</Dialog.Description>
           <div>
               <div className='grid grid-cols-2 grid-rows-1 overflow-y-auto justify-center gap-4 w-full'>
-                <div className='relative w-full h-[150px] rounded-lg'>
-                  <Image className='object-cover rounded-lg' src={`${props.product.product_images.img_one}`} fill alt={`${props.product.alt}`}/>
-                </div>
-                <div className='relative w-full h-[150px] rounded-lg'>
+                {props.product.product_images?.map((item, index) => (
+                  <>
+                    <div className='relative w-full h-[150px] rounded-lg'>
+                      <Image className='object-cover rounded-lg' src={`${item.img}`} fill alt={`${props.product.alt}`}/>
+                    </div>
+                  </>
+                ))}
+
+                {/* <div className='relative w-full h-[150px] rounded-lg'>
                   <Image className='object-cover rounded-lg' src={`${props.product.product_images.img_two}`} fill alt={`${props.product.alt}`}/>
                 </div>
                 <div className='relative w-full h-[150px] rounded-lg'>
@@ -64,7 +49,7 @@ const ProductDetailsDialog: React.FC<IProductDetailsDialogProps> = (props) => {
                 </div>
                 <div className='relative w-full h-[150px] rounded-lg'>
                   <Image className='object-cover rounded-lg' src={`${props.product.product_images.img_four}`} fill alt={`${props.product.alt}`}/>
-                </div>
+                </div> */}
               </div>
           </div>
           <div className='mt-6'>

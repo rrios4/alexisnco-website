@@ -1,12 +1,13 @@
 import React from 'react'
 import Image from 'next/image'
 import ProductDetailsDialog from './ProductDetailsDialog'
+import { IProduct } from '@/interfaces/global.interface'
 
-interface IProductArchived {
-    props: React.ReactNode;
+interface IProductArchivedProps {
+    products: IProduct[];
 }
 
-const ProductArchived = ({ products }) => {
+const ProductArchived: React.FC<IProductArchivedProps> = ({products}: IProductArchivedProps) => {
     return (
         <>
             {
