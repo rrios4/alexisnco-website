@@ -1,0 +1,1 @@
+import mailchimp from '@mailchimp/mailchimp_marketing'

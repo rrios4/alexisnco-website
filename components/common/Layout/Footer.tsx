@@ -1,4 +1,5 @@
 import { PaperPlaneIcon } from '@radix-ui/react-icons'
+import SubscribeNewsletter from '@/components/Newsletter/SubscribeNewsletter';
 
 export default function SmallWithNavigation() {
     return (
@@ -10,12 +11,8 @@ export default function SmallWithNavigation() {
                         <p className='font-light my-auto py-2'>Subscribe for Newsletters</p>
                     </div>
                     <div className='flex space-x-4 md:my-auto justify-center'>
-                        <input className="max-w-[400px] bg-gray-200 rounded-full focus:bg-gray-200 py-2 px-4 cursor-not-allowed" type={'text'} placeholder={'Your email address'} disabled/>
-                        <div className='flex flex-col justify-center my-auto'>
-                            <button disabled className="flex bg-yellow-300 text-black rounded-full p-3 hover:cursor-not-allowed opacity-70">
-                                <PaperPlaneIcon />
-                            </button>
-                        </div>
+                        <SubscribeNewsletter/>
+                        {/* <input className="max-w-[400px] bg-gray-200 rounded-full focus:bg-gray-200 py-2 px-4 cursor-not-allowed" type={'text'} placeholder={'Your email address'} disabled/> */}
                     </div>
 
                 </div>
