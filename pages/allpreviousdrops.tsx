@@ -1,10 +1,14 @@
 import React from 'react'
-import Image from 'next/image'
 import ProductArchived from '@/components/Product/ProductArchived'
-import ProductData from '../public/data/productDataIndex.json'
 import { ArchiveIcon } from '@radix-ui/react-icons'
+import { client } from '@/lib/contentful/client'
+import { IProductContenful } from '@/interfaces/global.interface'
 
-const AllPreviousDrops = () => {
+interface IAllPreviousDrops {
+  products: IProductContenful[]
+}
+
+const AllPreviousDrops = ({products}: IAllPreviousDrops) => {
   return (
     <div className='container mx-auto font-bold pt-6 pb-8 px-2 text-white'>
       <div className='flex flex-col md:flex-row w-full mb-6 mt-2'>
@@ -15,7 +19,7 @@ const AllPreviousDrops = () => {
       </div>
       <div className='bg-blue-700 rounded-lg overflow-scroll p-2'>
         <div className='px-3 grid grid-rows-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 space-x-4'>
-          <ProductArchived products={ProductData}/>
+          <ProductArchived products={products}/>
         </div>
       </div>
     </div>
@@ -23,3 +27,18 @@ const AllPreviousDrops = () => {
 }
 
 export default AllPreviousDrops
+
+export const getStaticProps = async() => {
+  const res = await client.getEntries({
+    content_type: 'product',
+    'fields.released': true,
+  })
+  // console.log(res.items)
+
+  return{
+    props: {
+      products: res.items,
+      revalidate: 60
+    }
+  }
+}

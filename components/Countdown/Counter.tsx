@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { calculateTimeLeft } from '../../utils/utils'
+import { calculateTimeLeft } from '@/lib/utils/utils';
 
 
 export const Counter = () => {

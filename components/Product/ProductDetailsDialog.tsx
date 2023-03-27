@@ -2,11 +2,13 @@ import React from 'react'
 import Image from 'next/image'
 import * as Dialog from '@radix-ui/react-dialog'
 import { Cross1Icon } from '@radix-ui/react-icons'
-import { IProduct } from '@/interfaces/global.interface'
+import { IProductContenful } from '@/interfaces/global.interface'
+import formatDate from '@/lib/utils/formatDate'
+import formatMoneyValue from '@/lib/utils/formatMoneyValues'
 
 interface IProductDetailsDialogProps {
   children: React.ReactNode;
-  product: IProduct;
+  product: IProductContenful;
 }
 
 const ProductDetailsDialog: React.FC<IProductDetailsDialogProps> = (props) => {
@@ -23,44 +25,34 @@ const ProductDetailsDialog: React.FC<IProductDetailsDialogProps> = (props) => {
             <div className='p-2 w-[15px] h-[15px]'>
 
             </div>
-            <Dialog.Title className='m-0 text-[17px] font-medium text-yellow-100'>{props.product.title}</Dialog.Title>
+            <Dialog.Title className='m-0 text-[17px] font-medium text-yellow-100'>{props.product.fields.title}</Dialog.Title>
             <div className='mt-[-2px] flex justify-end my-auto'>
               <Dialog.Close asChild>
                 <button className='hover:bg-black hover:bg-opacity-10 p-2 rounded-lg' aria-label='Close'><Cross1Icon/></button>
               </Dialog.Close>
             </div>
           </div>
-          <Dialog.Description className='mt-[10px] mb-5 text-[15px] leading-normal text-slate-200 text-center'>{props.product.description}</Dialog.Description>
+          <Dialog.Description className='mt-[10px] mb-5 text-[15px] leading-normal text-slate-200 text-center'>{props.product.fields.description}</Dialog.Description>
           <div>
               <div className='grid grid-cols-2 grid-rows-1 overflow-y-auto justify-center gap-4 w-full'>
-                {props.product.product_images?.map((item, index) => (
-                  <>
-                    <div className='relative w-full h-[150px] rounded-lg'>
-                      <Image className='object-cover rounded-lg' src={`${item.img}`} fill alt={`${props.product.alt}`}/>
-                    </div>
-                  </>
+                {props.product.fields.product_images?.map((item, index) => (
+                    <ul key={index}>
+                      <div className='relative w-full h-[150px] rounded-lg'>
+                        <Image className='object-cover rounded-lg' src={`https:${item.fields.file.url}`} fill sizes='' alt={`${item.fields.title}`}/>
+                      </div>
+                    </ul>
                 ))}
-
-                {/* <div className='relative w-full h-[150px] rounded-lg'>
-                  <Image className='object-cover rounded-lg' src={`${props.product.product_images.img_two}`} fill alt={`${props.product.alt}`}/>
-                </div>
-                <div className='relative w-full h-[150px] rounded-lg'>
-                  <Image className='object-cover rounded-lg' src={`${props.product.product_images.img_three}`} fill alt={`${props.product.alt}`}/>
-                </div>
-                <div className='relative w-full h-[150px] rounded-lg'>
-                  <Image className='object-cover rounded-lg' src={`${props.product.product_images.img_four}`} fill alt={`${props.product.alt}`}/>
-                </div> */}
               </div>
           </div>
           <div className='mt-6'>
-            <div className={`flex ${props.product.sold_out === true || props.product.released === true ? 'mb-4' : 'mb-0'} gap-2`}>
-              {props.product.sold_out === true ? 
+            <div className={`flex ${props.product.fields.sold_out === true || props.product.fields.released === true ? 'mb-4' : 'mb-0'} gap-2`}>
+              {props.product.fields.sold_out === true ? 
                   <div className='px-2 py-1 bg-red-500 w-max rounded-lg border border-red-400'>
                     <p className='text-xs text-slate-200'>SOLD OUT</p>
                   </div>
               : ""
               }
-              {props.product.released === true ? 
+              {props.product.fields.released === true ? 
                 <div className='px-2 py-1 bg-yellow-500 w-max rounded-lg border border-yellow-400'>
                   <p className='text-xs text-slate-200'>ARCHIVED</p>
                 </div>     
@@ -70,11 +62,11 @@ const ProductDetailsDialog: React.FC<IProductDetailsDialogProps> = (props) => {
             </div>
             <div className='mb-2'>
               <p className='font-medium'>Purchase Window:</p>
-              <p className='text-slate-200 font-light'>{props.product.drop_start_date} - {props.product.drop_close_date}</p>
+              <p className='text-slate-200 font-light'>{formatDate(props.product.fields.drop_start_date)} - {formatDate(props.product.fields.drop_close_date)}</p>
             </div>
             <div className='flex gap-2 justify-end'>
               <p className='font-medium'>Price:</p>
-              <p className='text-slate-200 font-light'>${props.product.price}</p>
+              <p className='text-slate-200 font-light'>${formatMoneyValue(props.product.fields.price)}</p>
             </div>
           </div>
         </Dialog.Content>

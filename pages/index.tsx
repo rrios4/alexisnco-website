@@ -6,6 +6,8 @@ import EmblaCarousel from '../components/Carousel/EmblaCarousel'
 import { EmblaOptionsType } from 'embla-carousel-react'
 import ProductLive from '@/components/Product/ProductLive'
 import Products from '../public/data/productDataIndex.json'
+import { client } from '@/lib/contentful/client'
+import { IProductContenful } from '@/interfaces/global.interface'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +17,11 @@ const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 const liveProduct = Products[0]
 
-export default function Home() {
+interface IHomeProps {
+  product: IProductContenful;
+}
+
+export default function Home({product}: IHomeProps) {
   return (
     <>
       <Head>
@@ -43,7 +49,7 @@ export default function Home() {
           </div>
           {/* Live Product Countdown */}
           <div>
-              <ProductLive product={liveProduct}/>
+              <ProductLive product={product}/>
           </div>
           {/* Featured Designs Carousel */}
           <div className='my-[4rem]'>
@@ -60,3 +66,23 @@ export default function Home() {
     </>
   )
 }
+
+export const getServerSideProps = async() => {
+  const res = await client.getEntries(
+  { 
+    content_type: 'product',
+    'fields.released': false,
+    'fields.upcoming': true
+  
+  })
+  // console.log(res.items[0].sys)
+
+  return{
+    props: {
+      product: res.items[0],
+      revalidate: 60
+    }
+  }
+}
+
+
