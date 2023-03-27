@@ -3,7 +3,7 @@ import SubscribeNewsletter from '@/components/Newsletter/SubscribeNewsletter';
 
 export default function SmallWithNavigation() {
     return (
-        <div className="bg-blue-700 shadow-sm text-gray-200 px-[0] w-full pb-[2rem] pt-2 md:pt-0 md:pb-0 mt-[2rem] md:mt-0 bottom-0">
+        <div className="bg-blue-700 shadow-sm text-gray-200 px-[0] w-full pb-[1rem] pt-2 md:pt-0 md:pb-0 mt-[2rem] md:mt-0 bottom-0">
             <div className="flex flex-col md:flex-row md:justify-between justify-center p-4">
                 <p className='mx-auto md:my-auto font-light'>© 2022 Alexis&Co. All rights reserved</p>
                 <div className="flex flex-col md:flex-row space-x-6 space-y-2">
