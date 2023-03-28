@@ -33,7 +33,7 @@ const ToastRadix = (props: Props) => {
           <button onClick={() => setOpen(false)}><Cross1Icon/></button>
         </Toast.Close>
       </Toast.Root>
-      <Toast.Viewport className='[--viewport-padding:_25px] fixed bottom-0 inset-x-0 mx-auto flex flex-col p-[var(--viewport-padding)] gap-[10px] w-[390px] max-w-[100vw] m-0 list-none z-[2147483647] outline-none' />
+      <Toast.Viewport className='[--viewport-padding:_25px] fixed top-0 inset-x-0 mx-auto flex flex-col p-[var(--viewport-padding)] gap-[10px] w-[390px] max-w-[100vw] m-0 list-none z-[2147483647] outline-none' />
     </Toast.Provider>
   )
 }
