@@ -28,7 +28,7 @@ const AllPreviousDrops = ({products}: IAllPreviousDrops) => {
 
 export default AllPreviousDrops
 
-export const getStaticProps = async() => {
+export const getServerSideProps = async() => {
   const res = await client.getEntries({
     content_type: 'product',
     'fields.released': true,
