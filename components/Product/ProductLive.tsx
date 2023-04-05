@@ -4,6 +4,7 @@ import dynamic from 'next/dynamic'
 import { IProductContenful } from '@/interfaces/global.interface'
 import formatDate from '@/lib/utils/formatDate'
 import formatMoneyValue from '@/lib/utils/formatMoneyValues'
+import { Button } from '../ui/button'
 
 interface IProductLiveProps {
     product: IProductContenful;
@@ -50,8 +51,17 @@ const ProductLive: React.FC<IProductLiveProps> = ({product} : IProductLiveProps)
                         {/* <DynamicCountdown date={liveProductReleaseDate}/> */}
                         <DynamicCounter/>
                     </div>
-                    <div className='flex justify-center'>
-                        <button disabled={product?.fields.purchase_window_open === true && product?.fields.sold_out === false ? false : product?.fields.purchase_window_open === true && product?.fields.sold_out === true ? true : true} className={`py-2 px-4 bg-yellow-400 rounded-lg text-md text-slate-700 ${product?.fields.purchase_window_open === true ? 'opacity-100' : "opacity-60 cursor-not-allowed"}`}>{product?.fields.purchase_window_open === true && product?.fields.sold_out === false ? 'BUY NOW' : product?.fields.purchase_window_open === true && product?.fields.sold_out === true ? "SOLD OUT" : product?.fields.purchase_window_open === false && product?.fields.sold_out === true && product?.fields.released === true ? "NOT AVAILABLE" : "COMING SOON"}</button>
+                    <div className='flex justify-center mt-4'>
+                        <Button variant={"russia"} 
+                        disabled={product?.fields.purchase_window_open === true && product?.fields.sold_out === false ? false : product?.fields.purchase_window_open === true && product?.fields.sold_out === true ? true : true} 
+                        className={`${product?.fields.purchase_window_open === true ? 'opacity-100' : 'opacity-60 cursor-not-allowed'}`}>
+                            {product?.fields.purchase_window_open === true && product?.fields.sold_out === false ? 'BUY NOW' : product?.fields.purchase_window_open === true && product?.fields.sold_out === true ? "SOLD OUT" : product?.fields.purchase_window_open === false && product?.fields.sold_out === true && product?.fields.released === true ? "NOT AVAILABLE" : "COMING SOON"}
+                        </Button>
+                        {/* <button 
+                        disabled={product?.fields.purchase_window_open === true && product?.fields.sold_out === false ? false : product?.fields.purchase_window_open === true && product?.fields.sold_out === true ? true : true} 
+                        className={`py-2 px-4 bg-yellow-400 rounded-lg text-md text-slate-700 ${product?.fields.purchase_window_open === true ? 'opacity-100' : "opacity-60 cursor-not-allowed"}`}>
+                            {product?.fields.purchase_window_open === true && product?.fields.sold_out === false ? 'BUY NOW' : product?.fields.purchase_window_open === true && product?.fields.sold_out === true ? "SOLD OUT" : product?.fields.purchase_window_open === false && product?.fields.sold_out === true && product?.fields.released === true ? "NOT AVAILABLE" : "COMING SOON"}
+                        </button> */}
                     </div>
                 </div>
             </div>
