@@ -58,7 +58,7 @@ const ProductDetailsDialog: React.FC<IProductDetailsDialogProps> = (props) => {
             </div>
             <div className='mb-2'>
               <p className='font-medium'>Purchase Window:</p>
-              <p className='text-slate-200 font-light dark:text-slate-300 text-slate-300'>{formatDate(props.product.fields.drop_start_date)} - {formatDate(props.product.fields.drop_close_date)}</p>
+              <p className='font-light dark:text-slate-300 text-slate-300'>{formatDate(props.product.fields.drop_start_date)} - {formatDate(props.product.fields.drop_close_date)}</p>
             </div>
             <div className='flex gap-2 justify-end'>
               <p className='font-medium '>Price:</p>
