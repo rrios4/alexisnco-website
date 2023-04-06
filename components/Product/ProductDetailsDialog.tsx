@@ -1,4 +1,3 @@
-// @ts-ignore
 import React from 'react'
 import Image from 'next/image'
 // import * as Dialog from '@radix-ui/react-dialog'
@@ -6,6 +5,7 @@ import { Cross1Icon } from '@radix-ui/react-icons'
 import { IProductContenful } from '@/interfaces/global.interface'
 import formatDate from '@/lib/utils/formatDate'
 import formatMoneyValue from '@/lib/utils/formatMoneyValues'
+// @ts-ignore 
 import {
   Dialog,
   DialogContent,
