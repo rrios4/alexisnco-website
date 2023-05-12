@@ -37,11 +37,11 @@ const Navbar = () => {
     }
     
     return (
-        <nav className={`bg-blue-700 bg-opacity-80 backdrop-blur-md w-full z-30 sticky shadow-md border-gray-100 transition duration-300 ease-in-out ${visible ? 'top-0 translate-y-[0px]' : '-translate-y-[100px]'}`}>
+        <nav className={`bg-purple-900 bg-opacity-80 backdrop-blur-md w-full z-30 sticky shadow-md border-gray-100 transition duration-300 ease-in-out ${visible ? 'top-0 translate-y-[0px]' : '-translate-y-[100px]'}`}>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                        <button onClick={() => setHamburgerMenuToggleIsOn(!hamburgerMenuToggleIsOn)} type="button" className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-blue-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+                        <button onClick={() => setHamburgerMenuToggleIsOn(!hamburgerMenuToggleIsOn)} type="button" className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-purple-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
                             <span className="sr-only">Open main menu</span>
                             {/* <!--
                                 Icon when menu is closed.
@@ -62,21 +62,21 @@ const Navbar = () => {
                     </div>
                     <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                         <div className="flex flex-shrink-0 items-center relative">
-                            <Image alt='Alexis&Company Black Logo' width={30} height={30} src={'/images/company-logo-white.png'} />
+                            <Image alt='Alexis&Company Black Logo' width={40} height={40} src={'/images/logo-youareastart-2023-purple.png'}/>
                             {/* <img className="block h-8 w-auto lg:hidden" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company"/> */}
                             {/* <img className="hidden h-8 w-auto lg:block" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company"/> */}
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">
-                                <Link href="/" className="text-gray-300 hover:bg-blue-800 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</Link>
-                                {/* <a href="#hf-designs" className="text-gray-300 hover:bg-blue-800 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Featured Designs</a> */}
-                                <Link href="/allpreviousdrops" className="text-gray-300 hover:bg-blue-800 hover:text-white rounded-md px-3 py-2 text-sm font-medium">All Drops</Link>
+                                <Link href="/" className="text-gray-300 hover:bg-purple-800 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Home</Link>
+                                {/* <a href="#hf-designs" className="text-gray-300 hover:bg-purple-800 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Featured Designs</a> */}
+                                <Link href="/allpreviousdrops" className="text-gray-300 hover:bg-purple-800 hover:text-white rounded-md px-3 py-2 text-sm font-medium">All Drops</Link>
                             </div>
                         </div>
                     </div>
                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                         <a target="_blank" href={"https://www.instagram.com/alexisnco/"} rel="noopener noreferrer">
-                            <div className='rounded-md p-2 hover:bg-blue-800'><InstagramLogoIcon height={20} width={20} className='text-slate-300'/></div>
+                            <div className='rounded-md p-2 hover:bg-purple-800'><InstagramLogoIcon height={20} width={20} className='text-slate-300'/></div>
                         </a>
                         {/* <button onClick={() => setPfpDropdownMenuHiddenIsOn(false)} type="button" className="rounded-md bg-slate-700 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="sr-only">View notifications</span>
@@ -119,7 +119,7 @@ const Navbar = () => {
             <div hidden={hamburgerMenuToggleIsOn} className={`sm:hidden`} id="mobile-menu">
                 <div className="space-y-1 px-2 pt-2 pb-3">
                     {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-                    <Link href={"/"} onClick={()=> setHamburgerMenuToggleIsOn(!hamburgerMenuToggleIsOn)} className="hover:bg-blue-800 text-gray-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">
+                    <Link href={"/"} onClick={()=> setHamburgerMenuToggleIsOn(!hamburgerMenuToggleIsOn)} className="hover:bg-purple-800 text-gray-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">
                         <div className="flex space-x-2">
                             <div className="my-auto px-2">
                                 <HomeIcon/>
@@ -127,7 +127,7 @@ const Navbar = () => {
                             <p> Home</p>
                         </div>
                     </Link>
-                    <Link href={"/allpreviousdrops"} onClick={()=> setHamburgerMenuToggleIsOn(!hamburgerMenuToggleIsOn)} className="hover:bg-blue-800 text-gray-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">
+                    <Link href={"/allpreviousdrops"} onClick={()=> setHamburgerMenuToggleIsOn(!hamburgerMenuToggleIsOn)} className="hover:bg-purple-800 text-gray-300 hover:text-white block rounded-md px-3 py-2 text-base font-medium" aria-current="page">
                         <div className="flex space-x-2">
                             <div className="my-auto px-2">
                                 <ArchiveIcon/>

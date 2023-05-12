@@ -53,11 +53,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   return (
     <>
       <div className="p-[1.6rem]">
-        <div className="overflow-hidden bg-blue-700 rounded-lg" ref={emblaRef}>
+        <div className="overflow-hidden bg-purple-800 bg-opacity-50 backdrop-blur-md rounded-lg" ref={emblaRef}>
           <div className="flex flex-row h-auto -ml-[1rem]">
             {slides.map((index) => (
               <div className="flex-[0_0_100%] min-w-0 pl-[1rem] relative" key={index}>
-                <div className="flex flex-col justify-center w-[2rem] h-[2rem] z-1 absolute top-[1rem] right-[1rem] rounded-[50%] bg-blue-500 bg-opacity-80 border-white border leading-[4.6rem] font-bold text-center pointer-events-none text-white">
+                <div className="flex flex-col justify-center w-[2rem] h-[2rem] z-1 absolute top-[1rem] right-[1rem] rounded-[50%] bg-purple-500 bg-opacity-80 border-white border leading-[4.6rem] font-bold text-center pointer-events-none text-white">
                   <span>{index + 1}</span>
                 </div>
                 <Image

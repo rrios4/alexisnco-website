@@ -11,7 +11,7 @@ export const DotButton: React.FC<DotButtonPropType> = (props) => {
 
   return (
     <button
-      className={'flex items-center ml-[0.75rem] mr-[0.75rem] w-[2rem] h-1 bg-slate-300'.concat(selected ? ' bg-gradient-to-r from-yellow-300 to-yellow-500' : '')}
+      className={'flex items-center ml-[0.75rem] mr-[0.75rem] w-[2rem] h-1 bg-slate-300'.concat(selected ? ' bg-gradient-to-r from-purple-300 to-purple-500' : '')}
       type="button"
       onClick={onClick}
     />

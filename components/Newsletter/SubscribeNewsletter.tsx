@@ -38,9 +38,9 @@ const SubscribeNewsletter = () => {
     <ToastRadix open={open} setOpen={setOpen} timerRef={timerRef} msg={responseMsg}>
       <div className='flex space-x-4 md:my-auto justify-center'>
         <form className='flex space-x-4' method='POST' onSubmit={handleSubmit}>
-          <input required className='max-w-[400px] bg-blue-200 text-white bg-opacity-20 rounded-full py-1 px-4' type='email' id='email' placeholder={'Enter email address'} onChange={(e) => setEmailInput(e.target.value)} value={emailInput}/>
+          <input required className='max-w-[400px] bg-purple-200 text-white bg-opacity-20 rounded-full py-1 px-4' type='email' id='email' placeholder={'Enter email address'} onChange={(e) => setEmailInput(e.target.value)} value={emailInput}/>
           <div className='flex justify-center my-auto'>
-              <Button type='submit' variant={"russia"} size={"sm"}>
+              <Button type='submit' variant={"star"} size={"sm"}>
                 <PaperPlaneIcon/>
               </Button>
               {/* <button type='submit' className="flex bg-yellow-300 hover:bg-yellow-400 text-black rounded-full p-2 transition ease-in-out duration-200 hover:-translate-y-1 ">

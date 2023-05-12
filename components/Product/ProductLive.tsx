@@ -32,7 +32,7 @@ const ProductLive: React.FC<IProductLiveProps> = ({product} : IProductLiveProps)
                 </div>
             </div>
             {/* Live Product Container */}
-            <div className='flex flex-col mb-0 bg-blue-700 rounded-lg my-4 py-8 mx-[1.6rem]'>
+            <div className='flex flex-col mb-0 bg-purple-800 bg-opacity-50 backdrop-blur-md rounded-lg my-4 py-8 mx-[1.6rem]'>
                 
                 <div className='flex flex-col w-full md:flex-row justify-center px-8 md:mx-0 rounded-lg space-y-4 md:space-y-0 md:space-x-4'>
                     <div className='flex relative w-full md:w-[30%] h-[250px] rounded-lg mx-auto bg-green-100'>

@@ -34,22 +34,23 @@ export default function Home({product}: IHomeProps) {
         <div className='container mx-auto'>
           {/* Home Page Header */}
           <div className='mt-[2rem] relative max-w-150px py-2'>
-            <Image className='mx-auto' src={"/images/header-pattern-yellow.png"} width={150} height={150} alt='Black Header Pattern'/>
+            <Image className='mx-auto' src={"/images/logo-youareastart-2023-purple.png"} width={150} height={150} alt='Black Header Pattern'/>
+            <Image className='mx-auto' src={"/images/logo-text-a&co-purple.png"} width={150} height={150} alt='Black Header Pattern'/>
           </div>
           <div className='flex justify-center text-white'>
               <div className='text-xl text-center py-[1rem] mr-4'><DigitalClock/></div>
               <p className='text-xl text-center py-[1rem]'>Houston, TX</p>
           </div>
           {/* Dynamic Home Page Design */}
-          <div className='flex w-full justify-center'>
+          {/* <div className='flex w-full justify-center'>
               <div className='max-w-[350px]'>
                 <h1 className='text-4xl md:text-5xl text-center my-6 text-yellow-300'>ГЕОПОЛИТИКА ЗАСТАЛА МОЕГО СЫНА УБИТЬ СВОЮ ВЕРБОВКУ</h1>
                 <p className='text-xs text-center my-6 text-yellow-300'>(GEOPOLITICS MADE MY SON KILL HIS RECRUITER)</p>
               </div>
-          </div>
+          </div> */}
           {/* Live Product Countdown */}
-          <div>
-              <ProductLive product={product}/>
+          <div className='py-[10rem]'>
+              {/* <ProductLive product={product}/> */}
           </div>
           {/* Featured Designs Carousel */}
           <div className='my-[4rem]'>

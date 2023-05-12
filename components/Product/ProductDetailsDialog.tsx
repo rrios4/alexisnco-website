@@ -25,7 +25,7 @@ const ProductDetailsDialog: React.FC<IProductDetailsDialogProps> = (props) => {
   return (
     <Dialog>
       <DialogTrigger className='hover:bg-slate-900 hover:bg-opacity-30 hover:rounded-xl'>{props.children}</DialogTrigger>
-      <DialogContent className='dark:bg-blue-600 bg-blue-600 text-white'>
+      <DialogContent className='dark:bg-purple-800 bg-purple-800 text-white'>
         <DialogHeader>
           <DialogTitle className='dark:text-slate-200 text-slate-200'>{props.product.fields.title}</DialogTitle>
           <DialogDescription className='dark:text-slate-300 text-slate-300'>{props.product.fields.description}</DialogDescription>
@@ -74,7 +74,7 @@ const ProductDetailsDialog: React.FC<IProductDetailsDialogProps> = (props) => {
     //   </Dialog.Trigger>
     //   <Dialog.Portal>
     //     <Dialog.Overlay className='bg-black bg-opacity-40 z-40 data-[state=open]:animate-overlayShow fixed inset-0'/>
-    //     <Dialog.Content className='text-white z-50 data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-lg bg-blue-600 p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none'>
+    //     <Dialog.Content className='text-white z-50 data-[state=open]:animate-contentShow fixed top-[50%] left-[50%] max-h-[85vh] w-[90vw] max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-lg bg-purple-800 p-[25px] shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] focus:outline-none'>
     //       {/* Modal Title with close button */}
     //       <div className='flex justify-between'>
     //         <div className='p-2 w-[15px] h-[15px]'>
