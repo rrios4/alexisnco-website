@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import jsonp from 'jsonp'
 import { PaperPlaneIcon } from '@radix-ui/react-icons'
-import ToastRadix from '../ui/ToastRadix'
-import { Button } from '../ui/button'
+import ToastRadix from './ui/ToastRadix'
+import { Button } from './ui/button'
 
 const SubscribeNewsletter = () => {
   const [open, setOpen] = useState(false);

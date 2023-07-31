@@ -1,5 +1,5 @@
 import { PaperPlaneIcon } from '@radix-ui/react-icons'
-import SubscribeNewsletter from '@/components/Newsletter/SubscribeNewsletter';
+import SubscribeNewsletter from '@/components/SubscribeNewsletter';
 
 export default function SmallWithNavigation() {
     return (

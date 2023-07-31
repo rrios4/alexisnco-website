@@ -24,7 +24,7 @@ interface IProductDetailsDialogProps {
 const ProductDetailsDialog: React.FC<IProductDetailsDialogProps> = (props) => {
   return (
     <Dialog>
-      <DialogTrigger className='hover:bg-slate-900 hover:bg-opacity-30 hover:rounded-xl'>{props.children}</DialogTrigger>
+      <DialogTrigger className='bg-purple-900 rounded-xl transition ease-in-out duration-150 hover:scale-95'>{props.children}</DialogTrigger>
       <DialogContent className='dark:bg-purple-800 bg-purple-800 text-white'>
         <DialogHeader>
           <DialogTitle className='dark:text-slate-200 text-slate-200'>{props.product.fields.title}</DialogTitle>

@@ -16,7 +16,7 @@ interface IProductLiveProps {
 // )
 
 const DynamicCounter = dynamic(() => 
-    import('@/components/Countdown/Counter').then((mod) => mod.Counter as any),
+    import('@/components/Counter').then((mod) => mod.Counter as any),
     { ssr: false}
 )
 

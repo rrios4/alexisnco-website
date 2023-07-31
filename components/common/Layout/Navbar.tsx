@@ -25,11 +25,11 @@ const Navbar = () => {
         setPrevScrollPos(currentScrollPos)
     }
 
-    useEffect( () => {
-        window.addEventListener('scroll', handleScroll);
+    // useEffect( () => {
+    //     window.addEventListener('scroll', handleScroll);
     
-        return () => window.removeEventListener('scroll', handleScroll)
-    })
+    //     return () => window.removeEventListener('scroll', handleScroll)
+    // })
     
 
     const handlePFDropdownMenuToggle = () => {

@@ -17,7 +17,7 @@ const AllPreviousDrops = ({products}: IAllPreviousDrops) => {
         </div>
         <p className='text-center md:text-left text-2xl tracking-wide font-medium'>All Drops</p>
       </div>
-      <div className='bg-purple-700 bg-opacity-50 backdrop-blur-md rounded-lg overflow-scroll p-2'>
+      <div className='w-full rounded-lg overflow-scroll p-2'>
         <div className='px-3 grid grid-rows-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 space-x-4'>
           <ProductArchived products={products}/>
         </div>
